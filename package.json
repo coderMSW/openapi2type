@@ -13,7 +13,6 @@
     "openapi2ts",
     "openapi2type",
     "swagger2ts",
-    "swagger2typescript",
     "msw"
   ],
   "author": "mashangwei",
