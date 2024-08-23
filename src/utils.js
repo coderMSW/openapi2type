@@ -60,6 +60,27 @@ const hanldeTransformChinese = (key) => {
     }
 }
 
+function getCallerFilePath() {
+    // 通过抛出一个错误并捕获它来获取调用栈
+    try {
+        throw new Error();
+    } catch (error) {
+        // 获取错误堆栈信息，并分割成数组
+        const stack = error.stack.split('\n');
+        // 假设当前函数是被另一个文件中的函数调用的，
+        // 那么第三行（索引为2）通常是调用者的信息
+        const callerLine = stack[2];
+        // 使用正则表达式匹配文件路径
+        const match = callerLine.match(/at\s.*\((.*):\d+:\d+\)/);
+        if (match && match[1]) {
+            return match[1]; // 返回文件路径
+        }
+    }
+    return null; // 如果没有找到合适的路径，则返回null
+}
+
+// 示例：在另一个文件中调用此函数
+console.log(getCallerFilePath());
 
 module.exports = {
     splitType,

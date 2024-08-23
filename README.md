@@ -10,16 +10,16 @@
 
    ```javascript
    // src/api/api.js
-   const transform = require('openapi2ts')//
-   
+   const transform = require("openapi2ts"); //
+
    transform({
-       swaggerPath: "http://swagger-html/doc", // 必填
-       namespace: "API", // 生成scchemas的命名空间名称 非必填
-       dirname: __dirname, // 获取当前路径 必填
-       outputPath: "./msw", // 输出路径，非必填，默认为 api文件
-       importStatement: "import { requester, AxiosRequestConfig } from './http'", // 引入请求方法和配置类型 必填
-       generateRequestFunction: false // 生成请求函数自定义，建议
-   })
+     swaggerPath: "http://swagger-html/doc", // 必填
+     namespace: "API", // 生成scchemas的命名空间名称 非必填
+     dirname: __dirname, // 获取当前路径，建议填入
+     outputPath: "./msw", // 输出路径，非必填，默认为 api文件
+     importStatement: "import { requester, AxiosRequestConfig } from './http'", // 引入请求方法和配置类型 必填
+     generateRequestFunction: false, // 生成请求函数自定义，建议
+   });
    ```
 
    ```javascript
@@ -41,7 +41,7 @@
    }
    ```
 
-5. 可手动node执行，也可以在`package.json`中 配置脚本执行程序，如：
+5. 可手动 node 执行，也可以在`package.json`中 配置脚本执行程序，如：
 
    ```json
    "scripts": {
@@ -49,4 +49,3 @@
    }
    // npm run api
    ```
-
