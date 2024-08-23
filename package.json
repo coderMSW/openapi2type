@@ -1,0 +1,24 @@
+{
+  "name": "openapi2type",
+  "version": "1.0.0",
+  "description": "Generate the Swagger document of the OpenAPI specification into a frontend interface document",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "openapi",
+    "swagger",
+    "typescript",
+    "openapi2ts",
+    "openapi2type",
+    "swagger2ts",
+    "swagger2typescript",
+    "msw"
+  ],
+  "author": "mashangwei",
+  "license": "MIT",
+  "dependencies": {
+    "openapi2type": "file:"
+  }
+}
